@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ScoreKeeper : MonoBehaviour
 {
     [SerializeField] private int score;
+    public TMP_Text scoreText;
 
     void Awake()
     {
@@ -24,6 +26,6 @@ public class ScoreKeeper : MonoBehaviour
     void AddtoScore()
     {
         score++;
-        Debug.Log(score);
+        scoreText.text = $"Score: {score}";
     }
 }
