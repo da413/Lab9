@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    public delegate void OnEnemyDeath();
+    public static event OnEnemyDeath onEnemyDeath;
     public float moveSpeed = 2f;
     public float moveRange = 2f;
     private Vector2 startPos;
@@ -20,5 +22,10 @@ public class EnemyMovement : MonoBehaviour
     {
         float offset = Mathf.Sin(Time.time * moveSpeed) * moveRange;
         transform.position = new Vector3(startPos.x + offset, startPos.y, -1);
+    }
+
+    void OnDestroy()
+    {
+        onEnemyDeath?.Invoke();
     }
 }
