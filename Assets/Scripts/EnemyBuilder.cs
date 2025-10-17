@@ -39,6 +39,7 @@ public class EnemyBuilder : MonoBehaviour
         if (renderer != null)
         {
             renderer.sprite = sprite;
+            renderer.sortingLayerName = "Enemy";
         }
     }
     
