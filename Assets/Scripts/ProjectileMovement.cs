@@ -24,9 +24,8 @@ public class ProjectileMovement : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             Destroy(collision.gameObject);
-
+            Deactivate();
         }
-        Deactivate();
     }
     
     void Deactivate()

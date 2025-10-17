@@ -216,6 +216,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &339890068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 339890069}
+  - component: {fileID: 339890070}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &339890069
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339890068}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &339890070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339890068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8adaa7f7cc5b3fd468538a4184c9babb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fastEnemySprite: {fileID: -1405353044, guid: a43d23bc469048d498b9202225cd1ab3, type: 3}
+  slowEnemySprite: {fileID: 2106236386, guid: a43d23bc469048d498b9202225cd1ab3, type: 3}
+  numEnemies: 5
 --- !u!1 &461928421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1158,15 +1205,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4548407734139642020, guid: 16f7facfbcda16b45838f6f4ae128400, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.21
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4548407734139642020, guid: 16f7facfbcda16b45838f6f4ae128400, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.86
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 4548407734139642020, guid: 16f7facfbcda16b45838f6f4ae128400, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.803
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4548407734139642020, guid: 16f7facfbcda16b45838f6f4ae128400, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1214,3 +1261,4 @@ SceneRoots:
   - {fileID: 461928423}
   - {fileID: 1022985316}
   - {fileID: 3964334772103786707}
+  - {fileID: 339890069}
