@@ -6,6 +6,7 @@ using TMPro;
 public class ScoreKeeper : MonoBehaviour
 {
     [SerializeField] private int score;
+    private int highScore; //score to be saved
     public TMP_Text scoreText;
 
     void Awake()
@@ -26,6 +27,7 @@ public class ScoreKeeper : MonoBehaviour
     void AddtoScore()
     {
         score++;
+       
         scoreText.text = $"Score: {score}";
     }
 }
