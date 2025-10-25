@@ -11,6 +11,7 @@ public class EnemyBuilder : MonoBehaviour
         enemy = new GameObject("Enemy");
         enemy.AddComponent<EnemyMovement>();
         enemy.AddComponent<SpriteRenderer>();
+        enemy.AddComponent<TransformSaver>();
     }
 
     public void SetPosition(Vector2 position)
