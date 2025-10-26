@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IJsonSaveable
 {
     public float speed = 5f;
+    public string SaveID => throw new System.NotImplementedException();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,4 +38,14 @@ public class PlayerController : MonoBehaviour
 
         GameObject projectile = ObjectPooler.Instance.SpawnFromPool("Projectile", transform.position, rotation);
     }
+
+  public string SaveData()
+  {
+    throw new System.NotImplementedException();
+  }
+
+  public void LoadData(string data)
+  {
+    throw new System.NotImplementedException();
+  }
 }
