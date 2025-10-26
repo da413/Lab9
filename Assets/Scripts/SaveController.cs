@@ -51,17 +51,17 @@ public class SaveController : MonoBehaviour
                 saveableList.Add(saveable);
             }
             if(mono is ScoreKeeper)
-                {
-                    if (!DirectoryExists())
-                        Directory.CreateDirectory(Application.persistentDataPath + "/" + directory);
+            {
+                if (!DirectoryExists())
+                    Directory.CreateDirectory(Application.persistentDataPath + "/" + directory);
                     
-                    BinaryFormatter bf = new BinaryFormatter();
-                    FileStream file = File.Create(GetBinaryPath());
-                    scoreData = new ScoreData();
-                    bf.Serialize(file, scoreData);
-                    file.Close(); Debug.LogFormat("You saved the file!, the score was {0}", scoreData.score);
+                BinaryFormatter bf = new BinaryFormatter();
+                FileStream file = File.Create(GetBinaryPath());
+                scoreData = new ScoreData();
+                bf.Serialize(file, scoreData);
+                file.Close(); Debug.LogFormat("You saved the file!, the score was {0}", scoreData.score);
 
-                }
+            }
         }
         
         SaveData saveData = new SaveData();
@@ -101,8 +101,6 @@ public class SaveController : MonoBehaviour
                 Debug.LogWarning("Failed to load file");
             }
         }
-
-        
 
         string json = File.ReadAllText(savePath);
         SaveData saveData = JsonUtility.FromJson<SaveData>(json);
