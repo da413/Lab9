@@ -1454,6 +1454,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d62c4d8d183a9b14d94ba0d36b7982e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreData:
+    score: 0
 --- !u!4 &1041583484
 Transform:
   m_ObjectHideFlags: 0
@@ -1498,7 +1500,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc969a017d5f3ad49a9e702ce7247b2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
   scoreText: {fileID: 302169092}
 --- !u!4 &1718272729
 Transform:

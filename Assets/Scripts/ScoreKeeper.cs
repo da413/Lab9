@@ -3,19 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+[System.Serializable]
+public class ScoreData
+{
+    public int score;
+
+    public ScoreData()
+    {
+        score = ScoreKeeper.score;
+    }
+}
 public class ScoreKeeper : MonoBehaviour
 {
-    [SerializeField] private int score;
-    public TMP_Text scoreText;
 
-    void Awake()
-    {
-        score = 0;
-    }
+    public static int score = 0;
+    public TMP_Text scoreText;
+    //string saveID;
+    //public string SaveID => saveID;
+
 
     void OnEnable()
     {
         EnemyMovement.onEnemyDeath += AddtoScore;
+        
+
     }
 
     void OnDisable()
@@ -26,6 +37,23 @@ public class ScoreKeeper : MonoBehaviour
     void AddtoScore()
     {
         score++;
-        scoreText.text = $"Score: {score}";
+
+       // scoreText.text = $"Score: {score}";
     }
+    
+    void Update()
+    {
+       scoreText.text = $"Score: {score}";
+    }
+    /*
+    public string SaveData()
+    {
+        return null;
+    }
+    public void LoadData(string data) 
+    {
+        Debug.Log("ahhh");
+    }
+    */
+
 }
